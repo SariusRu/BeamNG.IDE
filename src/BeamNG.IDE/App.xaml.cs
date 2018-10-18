@@ -13,19 +13,14 @@ namespace BeamNG.IDE
     /// </summary>
     public partial class App : Application
     {
-        MainWindow mainWindow = null;
         StartUp.SplashScreenForm splashScreen = new StartUp.SplashScreenForm();
-
         private void Application_Startup(object sender, StartupEventArgs e)
         {
             splashScreen.Show();
             BeamNG.IDE.Core.mainDirectory genMain = new Core.mainDirectory();
             genMain.initialize();
             StartPage.StartPage startPage = new StartPage.StartPage(splashScreen);
-            mainWindow = new MainWindow(startPage);
-            MainWindow.Width = 350;
-            MainWindow.Height = 600;
-            mainWindow.Show();
+            startPage.Show();
         }
     }
 }
