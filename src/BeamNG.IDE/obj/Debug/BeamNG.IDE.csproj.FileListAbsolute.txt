@@ -19,7 +19,3 @@ C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE\obj\Debug\Main
 C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE\obj\Debug\MainWindow\MainWindow.baml
 C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE\obj\Debug\StartPage\StartPage.g.cs
 C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE\obj\Debug\StartPage\StartPage.baml
-C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE\obj\Debug\ProjectGeneration\Project.g.cs
-C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE\obj\Debug\ProjectGeneration\Project.baml
-C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
-C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE\bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll
