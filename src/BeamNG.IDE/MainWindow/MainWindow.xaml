@@ -3,10 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:BeamNG.IDE"
-        xmlns:Docking="clr-namespace:WeifenLuo.WinFormsUI.Docking;assembly=WeifenLuo.WinFormsUI.Docking" x:Class="BeamNG.IDE.MainWindow"
-        mc:Ignorable="d"
-        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:local="clr-namespace:BeamNG.IDE"        
+        mc:Ignorable="d"        
+        x:Class="BeamNG.IDE.MainWindow"
         Title="BeamNG.IDE" WindowStartupLocation="CenterScreen" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" WindowState="Maximized">
     
     <Grid >
@@ -33,10 +32,7 @@
                 </MenuItem>
             </MenuItem>
         </Menu>
-        <ToolBarTray x:Name="MainTool" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Disabled" ClipToBounds="True"/>
-        <WindowsFormsHost x:Name="FormHost" Margin="0,0,0,0" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="2">
-            <wf:Control/>
-        </WindowsFormsHost>
+        <ToolBarTray x:Name="MainTool" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Disabled" ClipToBounds="True"/>        
     </Grid>
 
 </Window>
