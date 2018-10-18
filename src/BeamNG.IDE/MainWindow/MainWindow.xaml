@@ -1,10 +1,42 @@
-﻿<Window x:Class="BeamNG.IDE.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BeamNG.IDE"
+        xmlns:Docking="clr-namespace:WeifenLuo.WinFormsUI.Docking;assembly=WeifenLuo.WinFormsUI.Docking" x:Class="BeamNG.IDE.MainWindow"
         mc:Ignorable="d"
-        Title="BeamNG.IDE" WindowStartupLocation="CenterScreen" Background="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ResizeMode="CanMinimize">
-    <Frame x:Name="MainFrame" Margin="0,0,0,0"/>
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        Title="BeamNG.IDE" WindowStartupLocation="CenterScreen" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" WindowState="Maximized">
+    
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Frame x:Name="MainFrame" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2" Grid.RowSpan="3" Padding="0,0,0,0"/>
+        <Menu x:Name="MainMenu" IsMainMenu="True" Grid.Column="0" Grid.ColumnSpan="4">
+            <MenuItem Header="File">
+                <MenuItem Header="Close"/>
+            </MenuItem>
+            <MenuItem Header="View">
+                <MenuItem Header="Show...">
+                    <MenuItem Header="Project-Explorer" />
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <ToolBarTray x:Name="MainTool" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Disabled" ClipToBounds="True"/>
+        <WindowsFormsHost x:Name="FormHost" Margin="0,0,0,0" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="2">
+            <wf:Control/>
+        </WindowsFormsHost>
+    </Grid>
+
 </Window>
