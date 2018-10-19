@@ -13,16 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
-namespace BeamNG.IDE.StartPage
+namespace BeamNG.IDE.ProjectSelector
 {
     /// <summary>
-    /// Interaktionslogik für StartPage2.xaml
+    /// Interaktionslogik für ProjectSelector2.xaml
     /// </summary>
-    public partial class StartPage : Window
+    public partial class ProjectSelector : Window
     {
         Core.recentProjects rct = new Core.recentProjects();
         StartUp.SplashScreenForm splash = new StartUp.SplashScreenForm();
-        public StartPage(StartUp.SplashScreenForm splashScreen)
+        public ProjectSelector(StartUp.SplashScreenForm splashScreen)
         {
             BeamNG.IDE.Core.recentProjects recent = new Core.recentProjects();
             InitializeComponent();
@@ -54,6 +54,13 @@ namespace BeamNG.IDE.StartPage
                 timer.Stop();
                 splash.Close();
             };
+        }
+
+        private void New_Click(object sender, RoutedEventArgs e)
+        {
+            ProjectGeneration.newProject newPrj = new ProjectGeneration.newProject();
+            newPrj.Show();
+            this.Close();
         }
     }
 }

@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Xceed.Wpf.AvalonDock;
 
 namespace BeamNG.IDE
 {
@@ -23,9 +24,7 @@ namespace BeamNG.IDE
     {
         public MainWindow()
         {            
-            InitializeComponent();
-            
-            
+            InitializeComponent();            
         }
 
         public void ShowDockContent()

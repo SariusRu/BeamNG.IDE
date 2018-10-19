@@ -19,8 +19,8 @@ namespace BeamNG.IDE
             splashScreen.Show();
             BeamNG.IDE.Core.mainDirectory genMain = new Core.mainDirectory();
             genMain.initialize();
-            StartPage.StartPage startPage = new StartPage.StartPage(splashScreen);
-            startPage.Show();
+            ProjectSelector.ProjectSelector ProjectSelector = new ProjectSelector.ProjectSelector(splashScreen);
+            ProjectSelector.Show();
         }
     }
 }

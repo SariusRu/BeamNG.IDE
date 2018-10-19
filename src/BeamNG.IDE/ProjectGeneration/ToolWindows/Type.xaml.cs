@@ -13,16 +13,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BeamNG.IDE.ProjectGeneration
+namespace BeamNG.IDE.ProjectGeneration.ToolWindows
 {
     /// <summary>
-    /// Interaktionslogik für Project.xaml
+    /// Interaktionslogik für Type.xaml
     /// </summary>
-    public partial class Project : Page
+    public partial class Type : Page
     {
-        public Project()
+        public Type()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Name nm = new Name();
+            this.NavigationService.Navigate(nm);
+
         }
     }
 }
