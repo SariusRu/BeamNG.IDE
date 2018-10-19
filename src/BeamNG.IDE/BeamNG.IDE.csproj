@@ -77,6 +77,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="New.xaml.cs">
+      <DependentUpon>New.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ProjectGeneration\newProject.xaml.cs">
       <DependentUpon>newProject.xaml</DependentUpon>
     </Compile>
@@ -107,6 +110,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="New.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ProjectGeneration\newProject.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -158,6 +165,10 @@
     <ProjectReference Include="..\BeamNG.IDE.Core\BeamNG.IDE.Core.csproj">
       <Project>{b59ed337-8d85-49d1-8377-721c881e4a01}</Project>
       <Name>BeamNG.IDE.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BeamNG.IDE.GUI\BeamNG.IDE.GUI.csproj">
+      <Project>{d9c0373d-4809-46da-b776-b6ede7efb6fc}</Project>
+      <Name>BeamNG.IDE.GUI</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
