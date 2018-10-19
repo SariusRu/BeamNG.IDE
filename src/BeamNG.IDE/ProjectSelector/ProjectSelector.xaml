@@ -19,12 +19,12 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
-                        <Image Width="300" Height="60" Source="{Binding bitmap}" />
+                        <Image Width="300" Height="60" Source="{Binding bitmap}"/>
                     </WrapPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
         <Button x:Name="New" Grid.Row="2"  Content="New" Margin="10,10,10,10" Click="New_Click" />
-        <Button x:Name="Open" Grid.Row="2" Grid.Column="1" Content="Open" Margin="10,10,10,10" />
+        <Button x:Name="Open" Grid.Row="2" Grid.Column="1" Content="Open" Margin="10,10,10,10" />        
     </Grid>
 </Window>
