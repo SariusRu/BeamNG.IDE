@@ -23,6 +23,7 @@ namespace BeamNG.IDE.GUI
         public IDEButton()
         {
             InitializeComponent();
+            
         }
     }
 }

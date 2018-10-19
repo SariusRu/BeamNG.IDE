@@ -7,6 +7,13 @@
         xmlns:GUI="clr-namespace:BeamNG.IDE.GUI;assembly=BeamNG.IDE.GUI" x:Class="BeamNG.IDE.ProjectSelector.ProjectSelector"
         mc:Ignorable="d"
         Title="Projects" Height="450" Width="350" Loaded="Window_Loaded" Background="{x:Null}" ResizeMode="CanMinimize">
+    <Window.Resources>
+        <Storyboard x:Key="OnMouseDown1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="New">
+                <EasingDoubleKeyFrame KeyTime="0" Value="53.973"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
     <Grid Margin="0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="300"/>
@@ -25,7 +32,8 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button x:Name="Open" Grid.Row="2" Grid.Column="1" Content="Open" Margin="10,10,10,10" />        
-        <GUI:IDEButton x:Name="New" Height="Auto" Margin="10" Grid.Row="1" FontFamily="Arial" Cursor="Hand"/>
+        <GUI:IDEButton x:Name="New" Height="Auto" Margin="10" Grid.Row="1" FontFamily="Arial" Cursor="Hand" Tag="New" ButtonBase.Click="New_Click"/>
+        <GUI:IDEButton x:Name="Open" Height="Auto" Margin="10" Grid.Row="1" Grid.Column="1" FontFamily="Arial" Cursor="Hand" Tag="Open" ButtonBase.Click="Open_Click"/>
+
     </Grid>
 </Window>

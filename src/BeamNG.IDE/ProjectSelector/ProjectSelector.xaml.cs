@@ -55,6 +55,13 @@ namespace BeamNG.IDE.ProjectSelector
                 splash.Close();
             };
         }
+       
+        private void Open_Click(object sender, RoutedEventArgs e)
+        {
+               ProjectGeneration.newProject newPrj = new ProjectGeneration.newProject();
+               newPrj.Show();
+               this.Close();
+        }
 
         private void New_Click(object sender, RoutedEventArgs e)
         {

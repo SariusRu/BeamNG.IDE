@@ -1,6 +1,5 @@
 C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE.GUI\bin\Debug\BeamNG.IDE.GUI.dll
 C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE.GUI\bin\Debug\BeamNG.IDE.GUI.pdb
-C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE.GUI\obj\Debug\BeamNG.IDE.GUI.csprojAssemblyReference.cache
 C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE.GUI\obj\Debug\IDEButton.g.cs
 C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE.GUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE.GUI\obj\Debug\BeamNG.IDE.GUI_MarkupCompile.cache
