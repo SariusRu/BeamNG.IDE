@@ -12,3 +12,4 @@ C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE.GUI\obj\Debug\
 C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE.GUI\obj\Debug\BeamNG.IDE.GUI.csproj.CoreCompileInputs.cache
 C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE.GUI\obj\Debug\BeamNG.IDE.GUI.dll
 C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE.GUI\obj\Debug\BeamNG.IDE.GUI.pdb
+C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE.GUI\obj\Debug\BeamNG.IDE.GUI.csprojAssemblyReference.cache

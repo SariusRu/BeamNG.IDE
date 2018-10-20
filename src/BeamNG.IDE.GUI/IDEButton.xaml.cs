@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,9 @@ namespace BeamNG.IDE.GUI
     /// </summary>
     public partial class IDEButton : UserControl
     {
+        [Description("Test text displayed in the textbox"), Category("Data")]
+        public string ButtonContent{get; set; }
+
         public IDEButton()
         {
             InitializeComponent();

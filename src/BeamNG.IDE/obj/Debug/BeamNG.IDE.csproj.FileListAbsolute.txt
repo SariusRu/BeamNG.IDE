@@ -43,5 +43,3 @@ C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE\obj\Debug\Proj
 C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE\obj\Debug\ProjectGeneration\ToolWindows\Name.baml
 C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE\bin\Debug\BeamNG.IDE.GUI.dll
 C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE\bin\Debug\BeamNG.IDE.GUI.pdb
-C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE\obj\Debug\New.g.cs
-C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE\obj\Debug\New.baml

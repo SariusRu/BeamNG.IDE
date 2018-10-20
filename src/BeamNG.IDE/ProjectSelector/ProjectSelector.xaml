@@ -8,11 +8,7 @@
         mc:Ignorable="d"
         Title="Projects" Height="450" Width="350" Loaded="Window_Loaded" Background="{x:Null}" ResizeMode="CanMinimize">
     <Window.Resources>
-        <Storyboard x:Key="OnMouseDown1">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="New">
-                <EasingDoubleKeyFrame KeyTime="0" Value="53.973"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
+        <Storyboard x:Key="OnMouseDown1"/>
     </Window.Resources>
     <Grid Margin="0,0">
         <Grid.RowDefinitions>
@@ -32,8 +28,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <GUI:IDEButton x:Name="New" Height="Auto" Margin="10" Grid.Row="1" FontFamily="Arial" Cursor="Hand" Tag="New" ButtonBase.Click="New_Click"/>
-        <GUI:IDEButton x:Name="Open" Height="Auto" Margin="10" Grid.Row="1" Grid.Column="1" FontFamily="Arial" Cursor="Hand" Tag="Open" ButtonBase.Click="Open_Click"/>
-
+        <GUI:IDEButton x:Name="New"  Margin="10,10,10,10" Grid.Row="1" ButtonContent="New"/>
+        <GUI:IDEButton x:Name="OPen"  Margin="10,10,10,10" Grid.Row="1" Grid.Column="2" ButtonContent="Open"/>
     </Grid>
 </Window>
