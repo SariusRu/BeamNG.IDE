@@ -28,7 +28,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <GUI:IDEButton x:Name="New"  Margin="10,10,10,10" Grid.Row="1" ButtonContent="New"/>
-        <GUI:IDEButton x:Name="OPen"  Margin="10,10,10,10" Grid.Row="1" Grid.Column="2" ButtonContent="Open"/>
+        <GUI:IDEButton x:Name="new"  Margin="10,10,10,10" Grid.Row="1" ButtonContent="New" ButtonBase.Click="New_Click"/>
+        <GUI:IDEButton x:Name="open"  Margin="10,10,10,10" Grid.Row="1" Grid.Column="2" ButtonContent="Open" ButtonBase.Click="Open_Click"/>
     </Grid>
 </Window>
