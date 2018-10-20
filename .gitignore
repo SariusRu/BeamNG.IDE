@@ -1,2 +1,4 @@
 .vs/
-src/
+src/BeamNG.IDE/bin
+src/BeamNG.IDE.Core/bin
+src/BeamNG.IDE.GUI/bin
