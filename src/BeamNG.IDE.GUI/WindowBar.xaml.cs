@@ -22,7 +22,27 @@ namespace BeamNG.IDE.GUI
     {
         public WindowBar()
         {
-            InitializeComponent();
+            InitializeComponent();            
+        }
+
+        private void Grid_Click(object sender, RoutedEventArgs e)
+        {
+            FrameworkElement feSource = e.Source as FrameworkElement;
+            Window parentWindow = Window.GetWindow(this);
+            switch (feSource.Name)
+            {
+                case "minimize":
+                    parentWindow.WindowState = WindowState.Minimized;
+                    break;
+                case "maximize":
+                    parentWindow.WindowState = WindowState.Maximized;
+                    break;
+                case "close":                   
+                    parentWindow.Close();
+                    break;
+            }
+            e.Handled = true;
+
         }
     }
 }

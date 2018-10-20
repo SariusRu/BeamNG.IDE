@@ -32,6 +32,7 @@ namespace BeamNG.IDE.ProjectSelector
             InitializeComponent();
             initializeRecentProjects();
             splash = splashScreen;
+
         }
 
         private void initializeRecentProjects()
@@ -96,6 +97,8 @@ namespace BeamNG.IDE.ProjectSelector
                 this.Top = PointToScreen(Mouse.GetPosition(this)).Y - lastLocation.Y;
             }
         }
+
+        
     }
 }
 

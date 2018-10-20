@@ -11,7 +11,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Control}">
-                        <Grid Background="#FF635F5F">
+                        <Grid Background="#FF635F5F" ButtonBase.Click="Grid_Click">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition MaxWidth="30" MinWidth="30"/>
                                 <ColumnDefinition/>
@@ -27,7 +27,7 @@
                             <TextBlock x:Name="title" Text="TEMP" Grid.Column="1" VerticalAlignment="Center" Margin="10" Foreground="White"/>
                             <local:IDEButton x:Name="close" Grid.Column="4" Width="20" Height="20" ButtonContent="X" Margin="20,5,20,5"/>
                             <local:IDEButton x:Name="maximize" Grid.Column="3" Width="20" Height="20" ButtonContent="|" Margin="20,5,20,5"/>
-                            <local:IDEButton x:Name="minimize" Grid.Column="2" Width="20" Height="30" Margin="20,5,20,5" ButtonContent="_"/>
+                            <local:IDEButton x:Name="minimize" Grid.Column="2" Width="20" Height="30" Margin="20,5,20,5" ButtonContent="_" ButtonBase.Click="minimize_Click"/>
                             <Rectangle Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="1" Fill="#FF211F1F"/>
                         </Grid>
                     </ControlTemplate>
