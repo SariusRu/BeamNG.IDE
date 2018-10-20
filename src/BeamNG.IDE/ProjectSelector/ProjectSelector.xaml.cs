@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Runtime.InteropServices;
 
 namespace BeamNG.IDE.ProjectSelector
 {
@@ -20,6 +21,9 @@ namespace BeamNG.IDE.ProjectSelector
     /// </summary>
     public partial class ProjectSelector : Window
     {
+        private bool mouseClicked;
+        private Point lastLocation;
+
         Core.recentProjects rct = new Core.recentProjects();
         StartUp.SplashScreenForm splash = new StartUp.SplashScreenForm();
         public ProjectSelector(StartUp.SplashScreenForm splashScreen)
@@ -68,6 +72,29 @@ namespace BeamNG.IDE.ProjectSelector
             ProjectGeneration.newProject newPrj = new ProjectGeneration.newProject();
             newPrj.Show();
             this.Close();
+        }
+
+        private void bar_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                lastLocation = Mouse.GetPosition(bar);
+                mouseClicked = true;
+            }
+        }
+
+        private void bar_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            mouseClicked = false;
+        }
+
+        private void bar_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseClicked)
+            {
+                this.Left = PointToScreen(Mouse.GetPosition(this)).X - lastLocation.X;
+                this.Top = PointToScreen(Mouse.GetPosition(this)).Y - lastLocation.Y;
+            }
         }
     }
 }

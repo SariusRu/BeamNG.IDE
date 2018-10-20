@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="BeamNG.IDE.GUI.WindowBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BeamNG.IDE.GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Height="35">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type Control}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Control}">
+                        <Grid Background="#FF635F5F">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition MaxWidth="30" MinWidth="30"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition MaxWidth="60" MinWidth="60"/>
+                                <ColumnDefinition MaxWidth="60" MinWidth="60"/>
+                                <ColumnDefinition MaxWidth="60" MinWidth="60"/>
+
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="5" />
+                            </Grid.RowDefinitions>
+                            <TextBlock x:Name="title" Text="TEMP" Grid.Column="1" VerticalAlignment="Center" Margin="10" Foreground="White"/>
+                            <local:IDEButton x:Name="close" Grid.Column="4" Width="20" Height="20" ButtonContent="X" Margin="20,5,20,5"/>
+                            <local:IDEButton x:Name="maximize" Grid.Column="3" Width="20" Height="20" ButtonContent="|" Margin="20,5,20,5"/>
+                            <local:IDEButton x:Name="minimize" Grid.Column="2" Width="20" Height="30" Margin="20,5,20,5" ButtonContent="_"/>
+                            <Rectangle Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="1" Fill="#FF211F1F"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Control/>
+</UserControl>
