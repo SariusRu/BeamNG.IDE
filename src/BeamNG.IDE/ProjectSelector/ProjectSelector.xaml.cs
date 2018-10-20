@@ -42,12 +42,16 @@ namespace BeamNG.IDE.ProjectSelector
         }
 
         private void recentList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            Core.recentPrj selected = (Core.recentPrj)recentList.SelectedItem;
-            MainWindow main = new MainWindow();
-            main.Show();
-            this.Close();
-
+        {   
+            try
+            {
+                Core.recentPrj selected = (Core.recentPrj)recentList.SelectedItem;
+                selected.type = selected.type;
+                MainWindow main = new MainWindow();
+                main.Show();
+                this.Close();
+            }
+            catch (System.NullReferenceException){ }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
