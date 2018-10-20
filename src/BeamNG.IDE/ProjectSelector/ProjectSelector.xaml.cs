@@ -21,8 +21,7 @@ namespace BeamNG.IDE.ProjectSelector
     /// </summary>
     public partial class ProjectSelector : Window
     {
-        private bool mouseClicked;
-        private Point lastLocation;
+
 
         Core.recentProjects rct = new Core.recentProjects();
         StartUp.SplashScreenForm splash = new StartUp.SplashScreenForm();
@@ -78,31 +77,6 @@ namespace BeamNG.IDE.ProjectSelector
             newPrj.Show();
             this.Close();
         }
-
-        private void bar_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.ChangedButton == MouseButton.Left)
-            {
-                lastLocation = Mouse.GetPosition(bar);
-                mouseClicked = true;
-            }
-        }
-
-        private void bar_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            mouseClicked = false;
-        }
-
-        private void bar_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (mouseClicked)
-            {
-                this.Left = PointToScreen(Mouse.GetPosition(this)).X - lastLocation.X;
-                this.Top = PointToScreen(Mouse.GetPosition(this)).Y - lastLocation.Y;
-            }
-        }
-
-        
     }
 }
 

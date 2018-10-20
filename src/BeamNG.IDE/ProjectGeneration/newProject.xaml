@@ -1,12 +1,19 @@
-﻿<Window x:Class="BeamNG.IDE.ProjectGeneration.newProject"
+﻿<Window x:Name="NewProject"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BeamNG.IDE.ProjectGeneration"
+        xmlns:GUI="clr-namespace:BeamNG.IDE.GUI;assembly=BeamNG.IDE.GUI" x:Class="BeamNG.IDE.ProjectGeneration.newProject"
         mc:Ignorable="d"
-        Title="Creating Project..." Height="450" Width="800" MaxWidth="800" MaxHeight="447" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" WindowState="Maximized">
-    <Frame x:Name="mainFrame" Source="/BeamNG.IDE;component/ProjectGeneration/ToolWindows/Type.xaml" >
-        
-    </Frame>
+        Title="Creating Project..." Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Frame x:Name="mainFrame" Grid.Row="1" Source="/BeamNG.IDE;component/ProjectGeneration/ToolWindows/01_Type.xaml" />
+        <GUI:WindowBar Margin="0,0,0,0" d:LayoutOverrides="Width" WindowName="Creating New Project..." canClose="True" canMinimize="True"/>
+    </Grid>
+
 </Window>

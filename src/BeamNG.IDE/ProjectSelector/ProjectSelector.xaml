@@ -28,6 +28,6 @@
         </ListView>
         <GUI:IDEButton x:Name="new"  Margin="10,10,10,10" Grid.Row="2" ButtonContent="New" ButtonBase.Click="New_Click"/>
         <GUI:IDEButton x:Name="open"  Margin="10,10,10,10" Grid.Row="2" Grid.Column="2" ButtonContent="Open" ButtonBase.Click="Open_Click"/>
-        <GUI:WindowBar x:Name="bar" Grid.ColumnSpan="2" Margin="0,0,0,0" MouseDown="bar_MouseDown" MouseUp="bar_MouseUp" MouseMove="bar_MouseMove" />
+        <GUI:WindowBar x:Name="bar" Grid.ColumnSpan="2" Margin="0,0,0,0" WindowName="Recent Projects" canClose="True" canMinimize="True" />
     </Grid>
 </Window>
