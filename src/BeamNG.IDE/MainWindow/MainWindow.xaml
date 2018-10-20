@@ -4,12 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BeamNG.IDE"        
+        xmlns:GUI="clr-namespace:BeamNG.IDE.GUI;assembly=BeamNG.IDE.GUI"        
         mc:Ignorable="d"        
         x:Class="BeamNG.IDE.MainWindow"
-        Title="BeamNG.IDE" WindowStartupLocation="CenterScreen" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" WindowState="Maximized">
-    
+        Title="BeamNG.IDE" WindowStartupLocation="CenterScreen" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" WindowState="Maximized" WindowStyle="None">
+
     <Grid >
         <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
             <RowDefinition/>
@@ -21,8 +23,8 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Frame x:Name="MainFrame" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2" Grid.RowSpan="3" Padding="0,0,0,0"/>
-        <Menu x:Name="MainMenu" IsMainMenu="True" Grid.Column="0" Grid.ColumnSpan="4">
+        <Frame x:Name="MainFrame" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="3" Grid.RowSpan="3" Padding="0,0,0,0"/>
+        <Menu x:Name="MainMenu" IsMainMenu="True" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4">
             <MenuItem Header="File">
                 <MenuItem Header="Close"/>
             </MenuItem>
@@ -32,7 +34,8 @@
                 </MenuItem>
             </MenuItem>
         </Menu>
-        <ToolBarTray x:Name="MainTool" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Disabled" ClipToBounds="True"/>        
+        <ToolBarTray x:Name="MainTool" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2" ScrollViewer.VerticalScrollBarVisibility="Disabled" ClipToBounds="True"/>
+        <GUI:WindowBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,0,0,0"/>
     </Grid>
 
 </Window>
