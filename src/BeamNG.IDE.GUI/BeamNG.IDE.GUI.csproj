@@ -54,6 +54,9 @@
     <Compile Include="IDETextBox.xaml.cs">
       <DependentUpon>IDETextBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IDETextBoxx.xaml.cs">
+      <DependentUpon>IDETextBoxx.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -85,6 +88,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="IDETextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IDETextBoxx.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

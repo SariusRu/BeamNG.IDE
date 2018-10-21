@@ -10,8 +10,7 @@
       Title="_02_Name">
 
     <Grid Background="#FF635F5F">
-
-        <GUI:IDETextBox Height="32.503" Margin="10,10,257.366,0" VerticalAlignment="Top"/>
-
+        <GUI:IDEButton HorizontalAlignment="Left" Margin="90,204,0,145.5" Width="246" ButtonContent="Change Text" ButtonBase.Click="IDEButton_Click"/>
+        <GUI:IDETextBox HorizontalAlignment="Left" Height="41.5" Margin="77,47,0,0" VerticalAlignment="Top" Width="294" x:Name="name"/>
     </Grid>
 </Page>

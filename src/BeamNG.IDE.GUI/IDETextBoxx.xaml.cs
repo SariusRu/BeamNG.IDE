@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BeamNG.IDE.ProjectGeneration.ToolWindows
+namespace BeamNG.IDE.GUI
 {
     /// <summary>
-    /// Interaction logic for _02_Name.xaml
+    /// Interaction logic for IDETextBoxx.xaml
     /// </summary>
-    public partial class _02_Name : Page
+    public partial class IDETextBoxx : UserControl
     {
-        public _02_Name()
+        public IDETextBoxx()
         {
             InitializeComponent();
-        }
-
-        private void IDEButton_Click(object sender, RoutedEventArgs e)
-        {
-            name.Text = "Hallo";
         }
     }
 }
