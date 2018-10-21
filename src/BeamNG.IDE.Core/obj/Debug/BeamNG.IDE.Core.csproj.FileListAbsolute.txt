@@ -5,3 +5,4 @@ C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE.Core\obj\Debug
 C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE.Core\obj\Debug\BeamNG.IDE.Core.pdb
 C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE.Core\obj\Debug\BeamNG.IDE.Core.Properties.Resources.resources
 C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE.Core\obj\Debug\BeamNG.IDE.Core.csproj.GenerateResource.cache
+C:\Users\Samuel Rundel\Documents\GitHub\BeamNG.IDE\src\BeamNG.IDE.Core\obj\Debug\BeamNG.IDE.Core.csprojAssemblyReference.cache
