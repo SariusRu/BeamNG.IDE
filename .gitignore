@@ -1,7 +1,7 @@
 .vs/
-src/BeamNG.IDE/bin/
-src/BeamNG.IDE.Core/bin/
-src/BeamNG.IDE.GUI/bin/
-src/BeamNG.IDE/obj/	
-src/BeamNG.IDE.Core/obj/
-src/BeamNG.IDE.GUI/obj/
+src/BeamNG.IDE/bin
+src/BeamNG.IDE/obj
+src/BeamNG.IDE.Core/bin
+src/BeamNG.IDE.Core/obj
+src/BeamNG.IDE.GUI/bin
+src/BeamNG.IDE.GUI/obj
