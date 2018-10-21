@@ -7,10 +7,38 @@
       xmlns:GUI="clr-namespace:BeamNG.IDE.GUI;assembly=BeamNG.IDE.GUI" x:Class="BeamNG.IDE.ProjectGeneration.ToolWindows._02_Name"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="_02_Name">
+      Title="_02_Name" ShowsNavigationUI="False">
 
     <Grid Background="#FF635F5F">
-        <GUI:IDEButton HorizontalAlignment="Left" Margin="90,204,0,145.5" Width="246" ButtonContent="Change Text" ButtonBase.Click="IDEButton_Click"/>
-        <GUI:IDETextBox HorizontalAlignment="Left" Height="41.5" Margin="77,47,0,0" VerticalAlignment="Top" Width="294" x:Name="name"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="502"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <GUI:IDETextBox Grid.Row="1"  Margin="10,0,0,0" x:Name="name" Height="50" VerticalAlignment="Bottom" Text="Enter Name..."/>
+        <GUI:IDEButton x:Name="setName" Grid.Column="1" ButtonContent="Set Name" Height="50" Grid.Row="1" VerticalAlignment="Top" Margin="10,0,10,0" ButtonBase.Click="setName_Click" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.ColumnSpan="2" Text="Set the Name of the Project! (this is not how it will show up Ingame, but it is for the Application)" Margin="20,23,0,13" FontFamily="Arial" Foreground="White" VerticalAlignment="Center" Height="14"/>
+
+        <GUI:IDETextBox Grid.Row="3" Margin="10,0,0,0" x:Name="path" Height="50" VerticalAlignment="Bottom" Text="Enter Path or Browse Path..."/>
+        <GUI:IDEButton x:Name="setPath" Grid.Row="3" Grid.Column="1" ButtonContent="Set Path" Margin="10,0,5,0" ButtonBase.Click="setPath_Click"/>
+        <TextBlock Grid.ColumnSpan="2" Grid.Row="2" Text="Set the Path of the Project!" Margin="20,23,0,13" FontFamily="Arial" Foreground="White" VerticalAlignment="Center" Height="14"/>
+        <GUI:IDEButton x:Name="browsePath" Grid.Row="3" Grid.Column="2" ButtonContent="Browse Path" Margin="5,0,10,0" ButtonBase.Click="browsePath_Click"/>
+        <Grid Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <GUI:IDEButton x:Name="back" Margin="10,0,5,0" ButtonContent="Back" ButtonBase.Click="back_Click"/>
+            <GUI:IDEButton x:Name="next" Grid.Column="1" Margin="5,0,10,0" ButtonContent="Next" ButtonBase.Click="next_Click"/>
+        </Grid>
     </Grid>
 </Page>

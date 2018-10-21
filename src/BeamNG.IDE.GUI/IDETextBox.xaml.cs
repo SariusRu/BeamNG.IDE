@@ -46,28 +46,30 @@ namespace BeamNG.IDE.GUI
 
         private void border_MouseLeave(object sender, MouseEventArgs e)
         {
-            if(main.IsFocused == true)
-            {
-
-            }
-            else
+            if(main.IsFocused != true)
             {
                 back.Color = (Color)ColorConverter.ConvertFromString("#FF211F1F");
                 border.Background = back;
             }
-            
         }
 
         private void main_GotFocus(object sender, RoutedEventArgs e)
         {
             back.Color = (Color)ColorConverter.ConvertFromString("#403d3d");
             border.Background = back;
+            main.SelectAll();
         }
 
         private void main_LostFocus(object sender, RoutedEventArgs e)
         {
             back.Color = (Color)ColorConverter.ConvertFromString("#FF211F1F");
             border.Background = back;
+        }
+
+        private void border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            main.Focus();
+            main.SelectAll();
         }
     }
 }

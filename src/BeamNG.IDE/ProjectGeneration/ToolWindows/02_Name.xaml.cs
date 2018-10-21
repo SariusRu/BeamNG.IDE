@@ -20,14 +20,42 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
     /// </summary>
     public partial class _02_Name : Page
     {
-        public _02_Name()
+        BeamNG.IDE.Core.currentProject.currentPrj cur;
+
+        public _02_Name(BeamNG.IDE.Core.currentProject.currentPrj current)
         {
+            cur = current;
             InitializeComponent();
         }
 
-        private void IDEButton_Click(object sender, RoutedEventArgs e)
+        private void browsePath_Click(object sender, RoutedEventArgs e)
         {
-            name.Text = "Hallo";
+
+        }
+
+        private void setPath_Click(object sender, RoutedEventArgs e)
+        {
+            cur.filePath = path.Text;
+        }
+
+        private void setName_Click(object sender, RoutedEventArgs e)
+        {
+            cur.projectName = name.Text;
+        }
+
+        private void TextBlock_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
+
+        private void next_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

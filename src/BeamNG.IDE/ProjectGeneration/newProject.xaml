@@ -12,7 +12,7 @@
             <RowDefinition Height="35"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Frame x:Name="mainFrame" Grid.Row="1" Source="/BeamNG.IDE;component/ProjectGeneration/ToolWindows/01_Type.xaml" />
+        <Frame x:Name="mainFrame" Grid.Row="1" Source="/BeamNG.IDE;component/ProjectGeneration/ToolWindows/01_Type.xaml" NavigationUIVisibility="Hidden" />
         <GUI:WindowBar Margin="0,0,0,0" d:LayoutOverrides="Width" WindowName="Creating New Project..." canClose="True" canMinimize="True"/>
     </Grid>
 
