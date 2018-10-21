@@ -16,13 +16,13 @@ using System.Windows.Shapes;
 namespace BeamNG.IDE.ProjectGeneration.ToolWindows
 {
     /// <summary>
-    /// Interaction logic for _02_Name.xaml
+    /// Interaction logic for Name.xaml
     /// </summary>
-    public partial class _02_Name : Page
+    public partial class Name : Page
     {
         BeamNG.IDE.Core.currentProject.currentPrj cur;
 
-        public _02_Name(BeamNG.IDE.Core.currentProject.currentPrj current)
+        public Name(BeamNG.IDE.Core.currentProject.currentPrj current)
         {
             cur = current;
             InitializeComponent();

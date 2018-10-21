@@ -4,10 +4,10 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BeamNG.IDE.ProjectGeneration.ToolWindows"
-      xmlns:GUI="clr-namespace:BeamNG.IDE.GUI;assembly=BeamNG.IDE.GUI" x:Class="BeamNG.IDE.ProjectGeneration.ToolWindows._02_Name"
+      xmlns:GUI="clr-namespace:BeamNG.IDE.GUI;assembly=BeamNG.IDE.GUI" x:Class="BeamNG.IDE.ProjectGeneration.ToolWindows.Name"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="_02_Name" ShowsNavigationUI="False">
+      Title="Name" ShowsNavigationUI="False">
 
     <Grid Background="#FF635F5F">
         <Grid.RowDefinitions>
