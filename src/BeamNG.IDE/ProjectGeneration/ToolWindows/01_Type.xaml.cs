@@ -32,6 +32,7 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
         private void car_Click(object sender, RoutedEventArgs e)
         {
             cur.type = "car";
+            showNameScreen();
         }
 
         private void plane_Click(object sender, RoutedEventArgs e)
@@ -61,7 +62,8 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
 
         private void showNameScreen()
         {
-
+            BeamNG.IDE.ProjectGeneration.ToolWindows._02_Name nm = new _02_Name();
+            NavigationService.Navigate(nm);
         }
     }
 }

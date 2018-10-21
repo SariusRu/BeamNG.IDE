@@ -1,0 +1,17 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BeamNG.IDE.ProjectGeneration.ToolWindows"
+      xmlns:GUI="clr-namespace:BeamNG.IDE.GUI;assembly=BeamNG.IDE.GUI" x:Class="BeamNG.IDE.ProjectGeneration.ToolWindows._02_Name"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="_02_Name">
+
+    <Grid Background="#FF635F5F">
+
+        <GUI:IDETextBox Height="32.503" Margin="10,10,257.366,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>

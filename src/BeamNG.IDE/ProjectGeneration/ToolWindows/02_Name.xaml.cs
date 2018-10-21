@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BeamNG.IDE.GUI
+namespace BeamNG.IDE.ProjectGeneration.ToolWindows
 {
     /// <summary>
-    /// Interaktionslogik für TextBox.xaml
+    /// Interaction logic for _02_Name.xaml
     /// </summary>
-    public partial class TextBox : UserControl
+    public partial class _02_Name : Page
     {
-        public TextBox()
+        public _02_Name()
         {
             InitializeComponent();
         }
