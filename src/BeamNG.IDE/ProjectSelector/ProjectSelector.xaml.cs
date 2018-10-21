@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Runtime.InteropServices;
 
 namespace BeamNG.IDE.ProjectSelector
 {
@@ -20,6 +21,8 @@ namespace BeamNG.IDE.ProjectSelector
     /// </summary>
     public partial class ProjectSelector : Window
     {
+
+
         Core.recentProjects rct = new Core.recentProjects();
         StartUp.SplashScreenForm splash = new StartUp.SplashScreenForm();
         public ProjectSelector(StartUp.SplashScreenForm splashScreen)
@@ -28,6 +31,7 @@ namespace BeamNG.IDE.ProjectSelector
             InitializeComponent();
             initializeRecentProjects();
             splash = splashScreen;
+
         }
 
         private void initializeRecentProjects()
@@ -37,12 +41,16 @@ namespace BeamNG.IDE.ProjectSelector
         }
 
         private void recentList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            Core.recentPrj selected = (Core.recentPrj)recentList.SelectedItem;
-            MainWindow main = new MainWindow();
-            main.Show();
-            this.Close();
-
+        {   
+            try
+            {
+                Core.recentPrj selected = (Core.recentPrj)recentList.SelectedItem;
+                selected.type = selected.type;
+                MainWindow main = new MainWindow();
+                main.Show();
+                this.Close();
+            }
+            catch (System.NullReferenceException){ }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -54,6 +62,13 @@ namespace BeamNG.IDE.ProjectSelector
                 timer.Stop();
                 splash.Close();
             };
+        }
+       
+        private void Open_Click(object sender, RoutedEventArgs e)
+        {
+               ProjectGeneration.newProject newPrj = new ProjectGeneration.newProject();
+               newPrj.Show();
+               this.Close();
         }
 
         private void New_Click(object sender, RoutedEventArgs e)

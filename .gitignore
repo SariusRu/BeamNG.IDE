@@ -2,6 +2,10 @@
 src/BeamNG.IDE/bin
 src/BeamNG.IDE.Core/bin
 src/BeamNG.IDE.GUI/bin
+<<<<<<< HEAD
 src/BeamNG.IDE/obj	
+=======
+src/BeamNG.IDE/obj
+>>>>>>> cab74612d87a688d74332a703a72ab3c184cf8e9
 src/BeamNG.IDE.Core/obj
 src/BeamNG.IDE.GUI/obj
