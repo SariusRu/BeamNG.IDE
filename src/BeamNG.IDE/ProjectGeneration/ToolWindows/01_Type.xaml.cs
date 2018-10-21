@@ -20,15 +20,47 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
     /// </summary>
     public partial class Type : Page
     {
+        
+        BeamNG.IDE.Core.currentProject.currentPrj cur;
         public Type()
         {
+            DateTime currentTime = DateTime.Now;
+            cur = new Core.currentProject.currentPrj(null, currentTime, null, null);
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void car_Click(object sender, RoutedEventArgs e)
         {
-            //Name nm = new Name();
-            //this.NavigationService.Navigate(nm);
+            cur.type = "car";
+        }
+
+        private void plane_Click(object sender, RoutedEventArgs e)
+        {
+            cur.type = "plane";
+        }
+
+        private void ship_Click(object sender, RoutedEventArgs e)
+        {
+            cur.type = "ship";
+        }
+
+        private void Prop_Click(object sender, RoutedEventArgs e)
+        {
+            cur.type = "prop";
+        }
+
+        private void custom_Click(object sender, RoutedEventArgs e)
+        {
+            cur.type = "custom";
+        }
+
+        private void modification_Click(object sender, RoutedEventArgs e)
+        {
+            cur.type = "modification";
+        }
+
+        private void showNameScreen()
+        {
 
         }
     }

@@ -26,11 +26,11 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
-        <GUI:IDEButton Grid.Column="1" Grid.Row="1" ButtonContent="Car/Truck" ToolTip="Will create a new Project for Car or Trucks. (Engine, Wheels,...)"/>
-        <GUI:IDEButton Grid.Column="1" Grid.Row="3" ButtonContent="Plane" ToolTip="Will create a new Project for Planes. (No 'classic' Engine)"/>
-        <GUI:IDEButton Grid.Column="3" Grid.Row="3" ButtonContent="Ship" ToolTip="Will create a new Project for Ships. (No 'classic' Engine, No Wheels)"/>
-        <GUI:IDEButton Grid.Column="3" Grid.Row="1" ButtonContent="Prop"/>
-        <GUI:IDEButton Grid.Column="1" Grid.Row="5" ButtonContent="Custom" IsEnabled="False"/>
-        <GUI:IDEButton Grid.Column="3" Grid.Row="5" ButtonContent="Modify Existing Content" IsEnabled="False"/>
+        <GUI:IDEButton x:Name="car"          Grid.Column="1" Grid.Row="1" ButtonBase.Click="car_Click"          ButtonContent="Car/Truck" ToolTip="Will create a new Project for Car or Trucks. (Engine, Wheels,...)"/>
+        <GUI:IDEButton x:Name="plane"        Grid.Column="1" Grid.Row="3" ButtonBase.Click="plane_Click"        ButtonContent="Plane" ToolTip="Will create a new Project for Planes. (No 'classic' Engine)" IsEnabled="False"/>
+        <GUI:IDEButton x:Name="ship"         Grid.Column="3" Grid.Row="3" ButtonBase.Click="ship_Click"         ButtonContent="Ship" ToolTip="Will create a new Project for Ships. (No 'classic' Engine, No Wheels)" IsEnabled="False"/>
+        <GUI:IDEButton x:Name="Prop"         Grid.Column="3" Grid.Row="1" ButtonBase.Click="Prop_Click"         ButtonContent="Prop" IsEnabled="False"/>
+        <GUI:IDEButton x:Name="custom"       Grid.Column="1" Grid.Row="5" ButtonBase.Click="custom_Click"       ButtonContent="Custom" IsEnabled="False"/>
+        <GUI:IDEButton x:Name="modification" Grid.Column="3" Grid.Row="5" ButtonBase.Click="modification_Click" ButtonContent="Modify Existing Content" IsEnabled="False"/>
     </Grid>
 </Page>
