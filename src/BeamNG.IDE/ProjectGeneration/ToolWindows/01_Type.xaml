@@ -1,12 +1,13 @@
-﻿<Page x:Class="BeamNG.IDE.ProjectGeneration.ToolWindows.Type"
+﻿<Page
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BeamNG.IDE.ProjectGeneration.ToolWindows"
+      xmlns:GUI="clr-namespace:BeamNG.IDE.GUI;assembly=BeamNG.IDE.GUI" x:Class="BeamNG.IDE.ProjectGeneration.ToolWindows.Type"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Type">
+      Title="Type" Background="#FF635F5F">
 
     <Grid x:Name="mainGrid">
         <Grid.RowDefinitions>
@@ -25,6 +26,11 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
-        <Button Grid.Column="1" Grid.Row="1" Click="Button_Click"/>
+        <GUI:IDEButton Grid.Column="1" Grid.Row="1" ButtonContent="Car/Truck" ToolTip="Will create a new Project for Car or Trucks. (Engine, Wheels,...)"/>
+        <GUI:IDEButton Grid.Column="1" Grid.Row="3" ButtonContent="Plane" ToolTip="Will create a new Project for Planes. (No 'classic' Engine)"/>
+        <GUI:IDEButton Grid.Column="3" Grid.Row="3" ButtonContent="Ship" ToolTip="Will create a new Project for Ships. (No 'classic' Engine, No Wheels)"/>
+        <GUI:IDEButton Grid.Column="3" Grid.Row="1" ButtonContent="Prop"/>
+        <GUI:IDEButton Grid.Column="1" Grid.Row="5" ButtonContent="Custom" IsEnabled="False"/>
+        <GUI:IDEButton Grid.Column="3" Grid.Row="5" ButtonContent="Modify Existing Content" IsEnabled="False"/>
     </Grid>
 </Page>

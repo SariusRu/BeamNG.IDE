@@ -27,8 +27,8 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Name nm = new Name();
-            this.NavigationService.Navigate(nm);
+            //Name nm = new Name();
+            //this.NavigationService.Navigate(nm);
 
         }
     }

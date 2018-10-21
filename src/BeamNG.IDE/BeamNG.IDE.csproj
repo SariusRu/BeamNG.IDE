@@ -80,9 +80,6 @@
     <Compile Include="ProjectGeneration\newProject.xaml.cs">
       <DependentUpon>newProject.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ProjectGeneration\ToolWindows\02_Name.xaml.cs">
-      <DependentUpon>02_Name.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ProjectGeneration\ToolWindows\01_Type.xaml.cs">
       <DependentUpon>01_Type.xaml</DependentUpon>
     </Compile>
@@ -108,10 +105,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ProjectGeneration\newProject.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ProjectGeneration\ToolWindows\02_Name.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
