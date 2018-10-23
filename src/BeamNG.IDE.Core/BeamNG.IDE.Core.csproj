@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="currentProject.cs" />
+    <Compile Include="getToolBox.cs" />
     <Compile Include="mainDirectory.cs" />
     <Compile Include="Information.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
