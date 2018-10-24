@@ -24,15 +24,15 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
         {
             InitializeComponent();
             IDE.Core.ToolBox getTools = new Core.ToolBox();
-            getTools.getToolBox();
-            //List<Core.Tool> items = new List<Core.Tool>();
-            //for (int i = 0; i < tools.Length; i++)
-            //{
-              //      GUI.IDEListBoxItem customDesign = new GUI.IDEListBoxItem();
-              //    customDesign.Width = overView.Width;
-              //      customDesign.Text = tools[i].category;
-              //      overView.Items.Add(customDesign);
-            //}
+            Core.ToolBox.ToolCategory[] toolList = getTools.getToolBox();
+            List<Core.ToolBox.ToolCategory> items = new List<Core.ToolBox.ToolCategory>();
+            for (int i = 0; i < toolList.Length; i++)
+            {
+                  GUI.IDEListBoxItem customDesign = new GUI.IDEListBoxItem();
+                  //customDesign.Width = overView.Width;
+                  //customDesign.Text = toolList[i].category;
+
+            }
         }
     }
 }

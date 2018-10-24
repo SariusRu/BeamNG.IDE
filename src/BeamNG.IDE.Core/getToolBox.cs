@@ -18,7 +18,7 @@ namespace BeamNG.IDE.Core
     public class ToolBox
     {
         Tool[] toolArray = new Tool[1];
-        public void getToolBox()
+        public ToolCategory[] getToolBox()
         {
             string tools = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             tools = tools + "/BeamNG.IDE/Tools.xml";
@@ -32,7 +32,6 @@ namespace BeamNG.IDE.Core
             {
                 toolCategories[j] = new ToolCategory(null, null);
             }
-            int i = 0;
             int t = 0;
             int g = 0;
             foreach (XmlNode node in nodeList)
@@ -80,6 +79,7 @@ namespace BeamNG.IDE.Core
                 g++;
 
             }
+            return toolCategories;
         }
 
         public class Tool
