@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Tools>
+  <type>Miscalenous</type>
+  <Tool>
+    <name>NavUnit</name>
+    <header>Navigation Unit</header>
+    <source>a</source>
+    <helpText>Adds a Navigation to the vehicle.</helpText>
+    <amount>1</amount>
+    <fatherSection>main</fatherSection>
+    <Childs>0</Childs>
+  </Tool>
+  <Tool>
+    <name>glas</name>
+    <header>Glas</header>
+    <source>a</source>
+    <helpText>Adds the glas to the vehicle.</helpText>
+    <amount>1</amount>
+    <fatherSection>main></fatherSection>
+    <Childs>0</Childs>
+  </Tool>
+  <type>Systems</type>
+  <Tool>
+    <name>brakeLineLock</name>
+    <header>Brake Line Lock</header>
+    <source>a</source>
+    <helpText>?. You can add up to $.</helpText>
+    <amount>2</amount>
+    <fatherSection>main</fatherSection>
+    <Childs>0</Childs>
+  </Tool>
+  <Tool>
+    <name>ABS</name>
+    <header>Anti-Lock Braking System</header>
+    <source>a</source>
+    <helpText>Adds an Anti-Lock Braking System to the vehicle.</helpText>
+    <amount>1</amount>
+    <fatherSection>main</fatherSection>
+    <Childs>0</Childs>
+  </Tool>
+  <Tool>
+    <name>ESC</name>
+    <header>Electronic Stability Control</header>
+    <source>a</source>
+    <helpText>Adds an ESC to the vehicle.</helpText>
+    <amount>1</amount>
+    <fatherSection>main</fatherSection>
+    <Childs>0</Childs>
+  </Tool>
+  <type>Engine</type>
+  <Tool>
+    <name>tank</name>
+    <header>Tank</header>
+    <source>a</source>
+    <helpText>Adds the tanks to the vehicle. It makes sense to put it into the main or the Engine Section</helpText>
+    <amount>0</amount>
+    <fatherSection>X</fatherSection>
+    <Childs>0</Childs>
+  </Tool>
+  <Tool>
+    <name>radiator</name>
+    <header>Radiator</header>
+    <source>a</source>
+    <helpText>Adds a Radiator to the vehicle. It makes sense to place it into the Engine or the main Section</helpText>
+    <amount>1</amount>
+    <fatherSection>X</fatherSection>
+    <Childs>0</Childs>
+  </Tool>
+</Tools>
