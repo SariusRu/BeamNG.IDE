@@ -28,7 +28,7 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
             List<Core.ToolBox.ToolCategory> items = new List<Core.ToolBox.ToolCategory>();
             for (int i = 0; i < toolList.Length; i++)
             {
-                  GUI.IDEListBoxItem customDesign = new GUI.IDEListBoxItem();
+                  GUI.IDEViewBoxItem customDesign = new GUI.IDEViewBoxItem();
                   //customDesign.Width = overView.Width;
                   //customDesign.Text = toolList[i].category;
 

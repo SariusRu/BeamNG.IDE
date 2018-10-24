@@ -17,17 +17,17 @@ using System.Windows.Shapes;
 namespace BeamNG.IDE.GUI
 {
     /// <summary>
-    /// Interaktionslogik für IDEListBoxItem.xaml
+    /// Interaktionslogik für IDEViewBoxItem.xaml
     /// </summary>
     /// 
     
 
-    public partial class IDEListBoxItem : UserControl
+    public partial class IDEViewBoxItem : UserControl
     {
         [Description("The String wthin the Custom TextBox"), Category("Data")]
         public string Text { get; set; }
 
-        public IDEListBoxItem()
+        public IDEViewBoxItem()
         {
             InitializeComponent();
         }

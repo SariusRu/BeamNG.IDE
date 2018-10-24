@@ -51,8 +51,8 @@
     <Compile Include="IDEButton.xaml.cs">
       <DependentUpon>IDEButton.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IDEListBox.xaml.cs">
-      <DependentUpon>IDEListBox.xaml</DependentUpon>
+    <Compile Include="IDEViewBox.xaml.cs">
+      <DependentUpon>IDEViewBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="IDEListBoxItem.xaml.cs">
       <DependentUpon>IDEListBoxItem.xaml</DependentUpon>
@@ -90,7 +90,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="IDEListBox.xaml">
+    <Page Include="IDEViewBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -110,6 +110,12 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BeamNG.IDE.Core\BeamNG.IDE.Core.csproj">
+      <Project>{b59ed337-8d85-49d1-8377-721c881e4a01}</Project>
+      <Name>BeamNG.IDE.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

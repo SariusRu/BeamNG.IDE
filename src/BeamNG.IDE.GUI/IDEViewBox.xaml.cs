@@ -17,19 +17,26 @@ using System.Windows.Shapes;
 namespace BeamNG.IDE.GUI
 {
     /// <summary>
-    /// Interaction logic for IDEListBox.xaml
+    /// Interaction logic for IDEViewBox.xaml
     /// </summary>
-    public partial class IDEListBox : UserControl
+    public partial class IDEViewBox : UserControl
     {
-        [Description("Test text displayed in the textbox"), Category("Data")]
-        public ItemCollection ItemSource
-        {
-            get;
-        }
-
-        public IDEListBox()
+        public IDEViewBox()
         {
             InitializeComponent();
+            Core.ToolBox getTools = new Core.ToolBox();
+            Core.ToolBox.ToolCategory[] list;
+            list = getTools.getToolBox();
+            foreach(Core.ToolBox.ToolCategory Tools in list)
+            {
+                IDEViewBoxItem item = new IDEViewBoxItem();
+                item.Width = 800;
+                item.Text = Tools.category;
+                main.Items.Add(item);
+            }
+
         }
+
+        
     }
 }

@@ -30,7 +30,7 @@ namespace BeamNG.IDE.Core
             ToolCategory[] toolCategories = new ToolCategory[nodeList.Count];
             for (int j = 0; j < toolCategories.Length; j++)
             {
-                toolCategories[j] = new ToolCategory(null, null);
+                toolCategories[j] = new ToolCategory();
             }
             int t = 0;
             int g = 0;
@@ -107,10 +107,9 @@ namespace BeamNG.IDE.Core
             public Tool[] Tools { get; set; }
             public string category { get; set; }
 
-            public ToolCategory(Tool[] toolsTmp, string categoryTmp)
+            public ToolCategory()
             {
-                Tools = toolsTmp;
-                category = categoryTmp;
+                
             }
         }
     }
