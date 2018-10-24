@@ -45,7 +45,6 @@ namespace BeamNG.IDE.ProjectSelector
             try
             {
                 Core.recentPrj selected = (Core.recentPrj)recentList.SelectedItem;
-                selected.type = selected.type;
                 MainWindow main = new MainWindow();
                 main.Show();
                 this.Close();

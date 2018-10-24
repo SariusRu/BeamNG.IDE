@@ -51,12 +51,6 @@
     <Compile Include="IDEButton.xaml.cs">
       <DependentUpon>IDEButton.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IDEViewBox.xaml.cs">
-      <DependentUpon>IDEViewBox.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="IDEListBoxItem.xaml.cs">
-      <DependentUpon>IDEListBoxItem.xaml</DependentUpon>
-    </Compile>
     <Compile Include="IDETextBox.xaml.cs">
       <DependentUpon>IDETextBox.xaml</DependentUpon>
     </Compile>
@@ -87,14 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="IDEButton.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="IDEViewBox.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="IDEListBoxItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

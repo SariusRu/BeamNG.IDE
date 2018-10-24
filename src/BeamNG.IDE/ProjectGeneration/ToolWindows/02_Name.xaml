@@ -6,10 +6,10 @@
       xmlns:local="clr-namespace:BeamNG.IDE.ProjectGeneration.ToolWindows"
       xmlns:GUI="clr-namespace:BeamNG.IDE.GUI;assembly=BeamNG.IDE.GUI" x:Class="BeamNG.IDE.ProjectGeneration.ToolWindows.Name"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="1200"
       Title="Name" ShowsNavigationUI="False">
 
-    <Grid Background="#FF635F5F">
+    <Grid Background="#FF635F5F" Margin="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
@@ -20,7 +20,7 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="502"/>
+            <ColumnDefinition Width="900"/>
             <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>

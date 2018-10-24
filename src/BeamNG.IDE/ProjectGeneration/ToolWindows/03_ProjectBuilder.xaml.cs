@@ -16,23 +16,28 @@ using System.Windows.Shapes;
 namespace BeamNG.IDE.ProjectGeneration.ToolWindows
 {
     /// <summary>
-    /// Interaktionslogik für _03_ProjectBuilder.xaml
+    /// Interaktionslogik für ProjectBuilder.xaml
     /// </summary>
-    public partial class _03_ProjectBuilder : Page
+    public partial class ProjectBuilder : Page
     {
-        public _03_ProjectBuilder()
+        int active;
+        public ProjectBuilder()
         {
             InitializeComponent();
-            IDE.Core.ToolBox getTools = new Core.ToolBox();
-            Core.ToolBox.ToolCategory[] toolList = getTools.getToolBox();
-            List<Core.ToolBox.ToolCategory> items = new List<Core.ToolBox.ToolCategory>();
-            for (int i = 0; i < toolList.Length; i++)
+            Core.ToolBox getTools = new Core.ToolBox();
+            Core.ToolBox.ToolCategory[] tools = getTools.getToolBox();
+            category.ItemsSource = tools;
+        }
+
+        private void category_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
             {
-                  GUI.IDEViewBoxItem customDesign = new GUI.IDEViewBoxItem();
-                  //customDesign.Width = overView.Width;
-                  //customDesign.Text = toolList[i].category;
+                Core.ToolBox.ToolCategory selected = (Core.ToolBox.ToolCategory)category.SelectedItem;
+                tools.ItemsSource = selected.Tools;
 
             }
+            catch (System.NullReferenceException) { }
         }
     }
 }

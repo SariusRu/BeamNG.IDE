@@ -55,7 +55,7 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
 
         private void next_Click(object sender, RoutedEventArgs e)
         {
-            BeamNG.IDE.ProjectGeneration.ToolWindows._03_ProjectBuilder nv = new _03_ProjectBuilder();
+            BeamNG.IDE.ProjectGeneration.ToolWindows.ProjectBuilder nv = new ProjectBuilder();
             NavigationService.Navigate(nv);
         }
     }

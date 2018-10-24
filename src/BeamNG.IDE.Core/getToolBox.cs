@@ -18,6 +18,7 @@ namespace BeamNG.IDE.Core
     public class ToolBox
     {
         Tool[] toolArray = new Tool[1];
+        ToolCategory[] toolCategories;
         public ToolCategory[] getToolBox()
         {
             string tools = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
@@ -27,7 +28,7 @@ namespace BeamNG.IDE.Core
             XmlDocument xmldoc = new XmlDocument();
             xmldoc.LoadXml(xmlFile);
             XmlNodeList nodeList = xmldoc.GetElementsByTagName("type");
-            ToolCategory[] toolCategories = new ToolCategory[nodeList.Count];
+            toolCategories = new ToolCategory[nodeList.Count];
             for (int j = 0; j < toolCategories.Length; j++)
             {
                 toolCategories[j] = new ToolCategory();
@@ -74,12 +75,48 @@ namespace BeamNG.IDE.Core
                     }
                     toolCategories[g].Tools[t] = Tmp;
                     t++;
-
                 }
                 g++;
-
             }
+            createBitmapsforTools();
+            createBitmapsforCategory();
             return toolCategories;
+        }
+
+        private void createBitmapsforCategory()
+        {
+            foreach(ToolCategory toolCategory in toolCategories)
+            {
+                Bitmap BitmapTmp = new Bitmap(Properties.Resources.ListBoxTemplate);
+                Graphics g = Graphics.FromImage(BitmapTmp);
+                using (g)
+                {
+                    g.DrawString(toolCategory.category, new Font("Arial", 13), Brushes.Gray, 1, 1);
+                }
+                ConvertBitmapToBitmapSource converter = new ConvertBitmapToBitmapSource();
+                BitmapSource Bitmap = converter.ConvertToBitmapSource(BitmapTmp);
+                toolCategory.bitmap = Bitmap;
+            }
+        }
+
+        private void createBitmapsforTools()
+        {
+            foreach (ToolCategory toolCategory in toolCategories)
+            {
+                foreach(Tool tool in toolCategory.Tools)
+                {
+                    Bitmap BitmapTmp = new Bitmap(Properties.Resources.ListBoxTemplate);
+                    Graphics g = Graphics.FromImage(BitmapTmp);
+                    using (g)
+                    {
+                        g.DrawString(tool.toolHeader, new Font("Arial", 13), Brushes.Gray, 1, 1);
+                    }
+                    ConvertBitmapToBitmapSource converter = new ConvertBitmapToBitmapSource();
+                    BitmapSource Bitmap = converter.ConvertToBitmapSource(BitmapTmp);
+                    tool.bitmap = Bitmap;
+                }
+                
+            }
         }
 
         public class Tool
@@ -106,10 +143,10 @@ namespace BeamNG.IDE.Core
         {
             public Tool[] Tools { get; set; }
             public string category { get; set; }
+            public BitmapSource bitmap { get; set; }
 
             public ToolCategory()
             {
-                
             }
         }
     }

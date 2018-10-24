@@ -93,6 +93,16 @@ namespace BeamNG.IDE.Core.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ListBoxTemplate {
+            get {
+                object obj = ResourceManager.GetObject("ListBoxTemplate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ProjectTemplate {
             get {
                 object obj = ResourceManager.GetObject("ProjectTemplate", resourceCulture);

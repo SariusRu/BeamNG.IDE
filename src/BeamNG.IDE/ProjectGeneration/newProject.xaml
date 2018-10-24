@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BeamNG.IDE.ProjectGeneration"
         xmlns:GUI="clr-namespace:BeamNG.IDE.GUI;assembly=BeamNG.IDE.GUI" x:Class="BeamNG.IDE.ProjectGeneration.newProject"
         mc:Ignorable="d"
-        Title="Creating Project..." Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+        Title="Creating Project..." Height="600" Width="1200" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="35"/>
