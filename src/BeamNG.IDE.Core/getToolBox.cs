@@ -62,6 +62,9 @@ namespace BeamNG.IDE.Core
                             case "helpText":
                                 Tmp.helpText = tool.InnerText;
                                 break;
+                            case "helpLink":
+                                Tmp.helpLink = tool.InnerText;
+                                break;
                             case "amount":
                                 Tmp.amount = tool.InnerText;
                                 break;
@@ -127,6 +130,7 @@ namespace BeamNG.IDE.Core
             public string bitmapSrc { get; set; }
             public BitmapSource bitmap { get; set; }
             public string helpText { get; set; }
+            public string helpLink { get; set; }
             public string amount { get; set; }
             public string fatherSection { get; set; }
             public bool hasChildrens { get; set; }
