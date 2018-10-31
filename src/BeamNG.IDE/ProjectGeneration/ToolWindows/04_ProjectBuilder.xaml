@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:BeamNG.IDE.ProjectGeneration.ToolWindows"
       xmlns:GUI="clr-namespace:BeamNG.IDE.GUI;assembly=BeamNG.IDE.GUI" x:Class="BeamNG.IDE.ProjectGeneration.ToolWindows.ProjectBuilder"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="1200"
       Title="ProjectBuilder" Background="#FF635F5F">
 
     <Grid Margin="0,0,0,0">

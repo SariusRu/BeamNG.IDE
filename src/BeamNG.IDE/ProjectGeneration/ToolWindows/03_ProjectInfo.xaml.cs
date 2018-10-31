@@ -16,36 +16,13 @@ using System.Windows.Shapes;
 namespace BeamNG.IDE.ProjectGeneration.ToolWindows
 {
     /// <summary>
-    /// Interaction logic for Name.xaml
+    /// Interaktionslogik für _03_ProjectInfo.xaml
     /// </summary>
-    public partial class Name : Page
+    public partial class ProjectInfo : Page
     {
-        BeamNG.IDE.Core.currentProject.currentPrj cur;
-
-        public Name(BeamNG.IDE.Core.currentProject.currentPrj current)
+        public ProjectInfo()
         {
-            cur = current;
             InitializeComponent();
-        }
-
-        private void browsePath_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void setPath_Click(object sender, RoutedEventArgs e)
-        {
-            cur.filePath = path.Text;
-        }
-
-        private void setName_Click(object sender, RoutedEventArgs e)
-        {
-            cur.projectName = name.Text;
-        }
-
-        private void TextBlock_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
@@ -55,7 +32,7 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
 
         private void next_Click(object sender, RoutedEventArgs e)
         {
-            BeamNG.IDE.ProjectGeneration.ToolWindows.ProjectInfo nv = new ProjectInfo();
+            BeamNG.IDE.ProjectGeneration.ToolWindows.ProjectBuilder nv = new ProjectBuilder();
             NavigationService.Navigate(nv);
         }
     }
