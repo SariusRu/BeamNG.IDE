@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -83,14 +86,11 @@
     <Compile Include="ProjectGeneration\ToolWindows\01_Type.xaml.cs">
       <DependentUpon>01_Type.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ProjectGeneration\ToolWindows\02_Name.xaml.cs">
-      <DependentUpon>02_Name.xaml</DependentUpon>
+    <Compile Include="ProjectGeneration\ToolWindows\02_ProjectInfo.xaml.cs">
+      <DependentUpon>02_ProjectInfo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ProjectGeneration\ToolWindows\03_ProjectInfo.xaml.cs">
-      <DependentUpon>03_ProjectInfo.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ProjectGeneration\ToolWindows\04_ProjectBuilder.xaml.cs">
-      <DependentUpon>04_ProjectBuilder.xaml</DependentUpon>
+    <Compile Include="ProjectGeneration\ToolWindows\03_ProjectBuilder.xaml.cs">
+      <DependentUpon>03_ProjectBuilder.xaml</DependentUpon>
     </Compile>
     <Compile Include="ProjectSelector\ProjectSelector.xaml.cs">
       <DependentUpon>ProjectSelector.xaml</DependentUpon>
@@ -121,15 +121,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ProjectGeneration\ToolWindows\02_Name.xaml">
+    <Page Include="ProjectGeneration\ToolWindows\02_ProjectInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ProjectGeneration\ToolWindows\03_ProjectInfo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ProjectGeneration\ToolWindows\04_ProjectBuilder.xaml">
+    <Page Include="ProjectGeneration\ToolWindows\03_ProjectBuilder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

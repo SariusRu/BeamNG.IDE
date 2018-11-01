@@ -36,20 +36,20 @@
             <ColumnDefinition Width="25"/>
             <ColumnDefinition Width="25"/>
         </Grid.ColumnDefinitions>
-        <GUI:IDETextBox Grid.Row="1"  Margin="10,0,0,0" x:Name="name" Height="25" VerticalAlignment="Bottom" Text="Enter Name..."/>
-        <GUI:IDETextBox Grid.Row="3"  Margin="10,0,0,0" x:Name="brand" Height="25" VerticalAlignment="Bottom" Text="Enter Brand..."/>
-        <GUI:IDETextBox Grid.Row="5"  Margin="10,0,0,0" x:Name="author" Height="25" VerticalAlignment="Bottom" Text="Enter your Name..."/>
-        <GUI:IDETextBox Grid.Row="7"  Margin="10,0,0,0" x:Name="country" Height="25" VerticalAlignment="Bottom" Text="Enter the Country..."/>
-        <GUI:IDETextBox Grid.Row="9"  Margin="10,0,0,0" x:Name="type" Height="25" VerticalAlignment="Bottom" Text="Enter the Type..."/>
-        <GUI:IDETextBox Grid.Row="11"  Margin="10,0,0,0" x:Name="derbyClass" Height="25" VerticalAlignment="Bottom" Text="Enter the Derby Class..."/>
-        <GUI:IDETextBox Grid.Row="13"  Margin="10,0,0,0" x:Name="bodyStyle" Height="25" VerticalAlignment="Bottom" Text="Enter the Body Style..."/>
+        <GUI:IDETextBox Grid.Row="1"  Margin="10,0,0,0" x:Name="name" Height="25" VerticalAlignment="Bottom" Text="Enter Name..." PreviewTextInput="NumberValidationTextBox"/>
+        <GUI:IDETextBox Grid.Row="3"  Margin="10,0,0,0" x:Name="brand" Height="25" VerticalAlignment="Bottom" Text="Enter Brand..." PreviewTextInput="NumberValidationTextBox"/>
+        <GUI:IDETextBox Grid.Row="5"  Margin="10,0,0,0" x:Name="author" Height="25" VerticalAlignment="Bottom" Text="Enter your Name..." PreviewTextInput="NumberValidationTextBox"/>
+        <GUI:IDETextBox Grid.Row="7"  Margin="10,0,0,0" x:Name="country" Height="25" VerticalAlignment="Bottom" Text="Enter the Country..." PreviewTextInput="NumberValidationTextBox"/>
+        <GUI:IDETextBox Grid.Row="9"  Margin="10,0,0,0" x:Name="type" Height="25" VerticalAlignment="Bottom" Text="Enter the Type..." PreviewTextInput="NumberValidationTextBox"/>
+        <GUI:IDETextBox Grid.Row="11"  Margin="10,0,0,0" x:Name="derbyClass" Height="25" VerticalAlignment="Bottom" Text="Enter the Derby Class..." PreviewTextInput="NumberValidationTextBox"/>
+        <GUI:IDETextBox Grid.Row="13"  Margin="10,0,0,0" x:Name="bodyStyle" Height="25" VerticalAlignment="Bottom" Text="Enter the Body Style..." PreviewTextInput="NumberValidationTextBox"/>
         <Grid Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="15">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <GUI:IDETextBox Grid.Row="0" Grid.Column="0" Margin="10,0,5,0" x:Name="yearFrom" Height="25" VerticalAlignment="Bottom" Text="From..."/>
-            <GUI:IDETextBox Grid.Row="0" Grid.Column="1" Margin="5,0,0,0" x:Name="yearTill" Height="25" VerticalAlignment="Bottom" Text="Till..."/>
+            <GUI:IDETextBox x:Name="from" Grid.Row="0" Grid.Column="0" Margin="10,0,5,0" Height="25" VerticalAlignment="Bottom" Text="From..." PreviewTextInput="number_PreviewTextInput"/>
+            <GUI:IDETextBox x:Name="till" Grid.Row="0" Grid.Column="1" Margin="5,0,0,0" Height="25" VerticalAlignment="Bottom" Text="Till..." PreviewTextInput="number_PreviewTextInput"/>
         </Grid>
         <Grid Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="17">
             <Grid.ColumnDefinitions>
