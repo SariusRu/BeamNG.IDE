@@ -62,7 +62,9 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
 
         private void showNameScreen()
         {
-            BeamNG.IDE.ProjectGeneration.ToolWindows.Name nm = new Name(cur);
+            //BeamNG.IDE.ProjectGeneration.ToolWindows.ProjectInfo nm = new ProjectInfo();
+            //NavigationService.Navigate(nm);
+            BeamNG.IDE.ProjectGeneration.ToolWindows.ProjectBuilder nm = new ProjectBuilder();
             NavigationService.Navigate(nm);
         }
     }
