@@ -17,7 +17,7 @@ namespace BeamNG.IDE.Core
 {
     public class ToolBox
     {
-        Tool[] toolArray = new Tool[1];
+        public Tool[] toolArray = new Tool[1];
         ToolCategory[] toolCategories;
         public ToolCategory[] getToolBox()
         {

@@ -31,7 +31,25 @@ namespace BeamNG.IDE.ProjectSelector
             InitializeComponent();
             initializeRecentProjects();
             splash = splashScreen;
+            //Check for file errors - read from toolbox-File and Check if for every file a dummy file exists
+            checkForErrors();
 
+        }
+
+        private Boolean checkForErrors()
+        {
+            Core.ToolBox getTools = new Core.ToolBox();
+            Core.ToolBox.ToolCategory[] tools = getTools.getToolBox();
+            for(int i = 0; i < tools.Length; i++)
+            {
+                for(int j = 0; j < tools[i].Tools.Length; j++)
+                {
+                    string name = tools[i].Tools[j].toolName;
+                    MessageBox.Show(name);
+                }
+                
+            }
+            return false;
         }
 
         private void initializeRecentProjects()
