@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,18 +22,21 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
     public partial class ProjectBuilder : Page
     {
         Point startPoint;
+        Point _lastMouseDown;
+        builderItem draggedItem, _target;
 
         public ProjectBuilder()
         {
             InitializeComponent();
+            //Generate Content of toolbox
             Core.ToolBox getTools = new Core.ToolBox();
             Core.ToolBox.ToolCategory[] tools = getTools.getToolBox();
+            //Adding Items to Toolbox
             category.ItemsSource = tools;
+            //setting Properties
             toolsBox.AllowDrop = true;
             mainBuilder.AllowDrop = true;
-            //toolsBox.AddHandler(UIElement.MouseMoveEvent, new MouseButtonEventHandler(toolsBox_Move), true);
         }
-
         private void category_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
@@ -42,14 +46,10 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
             }
             catch (System.NullReferenceException) { }
         }
-
         private void toolsBox_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             startPoint = e.GetPosition(null);
         }
-
-
-        //Registering of the MouseMove, triggering of the DoDragDrop
         private void toolsBox_MouseMove(object sender, MouseEventArgs e)
         {
             Point mousePos = e.GetPosition(null);
@@ -69,8 +69,6 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
                 }
             }
         }
-
-        //
         private static T FindAnchestor<T>(DependencyObject current) where T : DependencyObject
         {
             do
@@ -84,23 +82,19 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
             while (current != null);
             return null;
         }
-
         private void mainBuilder_Drop(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent("myFormat"))
             {
                 Point p = e.GetPosition(mainBuilder);
-                if(getItem(p))
-                obj.Text = getItem(p).ToString();
                 Core.ToolBox.Tool tool = e.Data.GetData("myFormat") as Core.ToolBox.Tool;
                 TreeView treeView = sender as TreeView;
-                customTreeViewItem itemToAdd = new customTreeViewItem();
-                itemToAdd.treeViewTool = tool;
+                builderItem itemToAdd = new builderItem();
+                itemToAdd.builderTool = tool;
                 itemToAdd.Header = tool.toolHeader;
                 treeView.Items.Add(itemToAdd);
             }
         }
-
         private void mainBuilder_DragEnter(object sender, DragEventArgs e)
         {
             if (!e.Data.GetDataPresent("myFormat") || sender == e.Source)
@@ -108,11 +102,8 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
                 e.Effects = DragDropEffects.None;
             }
         }
-
         private bool getItem(Point p)
         {
-           
-            pos.Text = p.ToString();
             Core.ToolBox.Tool hovering = mainBuilder.InputHitTest(p) as Core.ToolBox.Tool;
             if(hovering != null)
             {
@@ -120,10 +111,6 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
             }
             return true;
         }
-
-        Point _lastMouseDown;
-        customTreeViewItem draggedItem, _target;
-
         private void TreeView_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -144,7 +131,7 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
                     if ((Math.Abs(currentPosition.X - _lastMouseDown.X) > 10.0) ||
                         (Math.Abs(currentPosition.Y - _lastMouseDown.Y) > 10.0))
                     {
-                        draggedItem = (customTreeViewItem)mainBuilder.SelectedItem;
+                        draggedItem = (builderItem)mainBuilder.SelectedItem;
                         if (draggedItem != null)
                         {
                             DragDropEffects finalDropEffect = DragDrop.DoDragDrop(mainBuilder, mainBuilder.SelectedValue,
@@ -181,7 +168,7 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
                     (Math.Abs(currentPosition.Y - _lastMouseDown.Y) > 10.0))
                 {
                     // Verify that this is a valid drop and then store the drop target
-                    customTreeViewItem item = GetNearestContainer(e.OriginalSource as UIElement);
+                    builderItem item = GetNearestContainer(e.OriginalSource as UIElement);
                     if (CheckDropTarget(draggedItem, item))
                     {
                         e.Effects = DragDropEffects.Move;
@@ -205,7 +192,7 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
                 e.Handled = true;
 
                 // Verify that this is a valid drop and then store the drop target
-                customTreeViewItem TargetItem = GetNearestContainer(e.OriginalSource as UIElement);
+                builderItem TargetItem = GetNearestContainer(e.OriginalSource as UIElement);
                 if (TargetItem != null && draggedItem != null)
                 {
                     _target = TargetItem;
@@ -216,7 +203,7 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
             {
             }
         }
-        private bool CheckDropTarget(customTreeViewItem _sourceItem, customTreeViewItem _targetItem)
+        private bool CheckDropTarget(builderItem _sourceItem, builderItem _targetItem)
         {
             //Check whether the target item is meeting your condition
             bool _isEqual = false;
@@ -227,43 +214,40 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
             return _isEqual;
 
         }
-        private void CopyItem(customTreeViewItem _sourceItem, customTreeViewItem _targetItem)
+        private void CopyItem(builderItem _sourceItem, builderItem _targetItem)
         {
-
-            //Asking user wether he want to drop the dragged customTreeViewItem here or not
-            if (MessageBox.Show("Would you like to drop " + _sourceItem.Header.ToString() + " into " + _targetItem.Header.ToString() + "", "", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            try
             {
-                try
-                {
-                    //adding dragged customTreeViewItem in target customTreeViewItem
-                    addChild(_sourceItem, _targetItem);
+                //adding dragged customTreeViewItem in target customTreeViewItem
+                addChild(_sourceItem, _targetItem);
 
-                    //finding Parent customTreeViewItem of dragged customTreeViewItem 
-                    customTreeViewItem ParentItem = FindVisualParent<customTreeViewItem>(_sourceItem);
-                    // if parent is null then remove from TreeView else remove from Parent customTreeViewItem
-                    if (ParentItem == null)
-                    {
-                        mainBuilder.Items.Remove(_sourceItem);
-                    }
-                    else
-                    {
-                        ParentItem.Items.Remove(_sourceItem);
-                    }
+                //finding Parent customTreeViewItem of dragged customTreeViewItem 
+                builderItem ParentItem = FindVisualParent<builderItem>(_sourceItem);
+                // if parent is null then remove from TreeView else remove from Parent customTreeViewItem
+                if (ParentItem == null)
+                {
+                    mainBuilder.Items.Remove(_sourceItem);
                 }
-                catch
+                else
                 {
-
+                    ParentItem.Items.Remove(_sourceItem);
                 }
             }
+            catch
+            {
+
+            }
+            //}
 
         }
-        public void addChild(customTreeViewItem _sourceItem, customTreeViewItem _targetItem)
+        public void addChild(builderItem _sourceItem, builderItem _targetItem)
         {
             // add item in target customTreeViewItem 
-            customTreeViewItem item1 = new customTreeViewItem();
+            builderItem item1 = new builderItem();
             item1.Header = _sourceItem.Header;
+            item1.builderTool = _sourceItem.builderTool;
             _targetItem.Items.Add(item1);
-            foreach (customTreeViewItem item in _sourceItem.Items)
+            foreach (builderItem item in _sourceItem.Items)
             {
                 addChild(item, item1);
             }
@@ -292,26 +276,35 @@ namespace BeamNG.IDE.ProjectGeneration.ToolWindows
 
             return null;
         }
-        private customTreeViewItem GetNearestContainer(UIElement element)
+        private builderItem GetNearestContainer(UIElement element)
         {
             // Walk up the element tree to the nearest tree view item.
-            customTreeViewItem container = element as customTreeViewItem;
+            builderItem container = element as builderItem;
             while ((container == null) && (element != null))
             {
                 element = VisualTreeHelper.GetParent(element) as UIElement;
-                container = element as customTreeViewItem;
+                container = element as builderItem;
             }
             return container;
         }
 
+        private void IDEButton_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 
-    public class customTreeViewItem : TreeViewItem
+    public class builderItem : TreeViewItem
     {
-        public Core.ToolBox.Tool treeViewTool;
+        
+        [Description("Test text displayed in the textbox"), Category("Data")]
+        public Core.ToolBox.Tool builderTool{ get; set;}
 
-        public customTreeViewItem()
+
+        public builderItem()
         {
+            builderTool = new Core.ToolBox.Tool(null, null, null, null);
         }
     }
 }
